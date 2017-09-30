@@ -6,9 +6,9 @@
 //  Copyright © 2017年 王可成. All rights reserved.
 //
 
-#import "Test01VC.h"
+#import "Test01Texture.h"
 
-@interface Test01VC ()
+@interface Test01Texture ()
 @property (nonatomic) GLKBaseEffect *effect;
 @end
 
@@ -24,7 +24,7 @@ static const SceneVertex vertices[] = {
     {{ 0.5, -0.5, 0}, {1, 0}},
 };
 
-@implementation Test01VC
+@implementation Test01Texture
 - (void)viewDidLoad{
     [super viewDidLoad];
     
