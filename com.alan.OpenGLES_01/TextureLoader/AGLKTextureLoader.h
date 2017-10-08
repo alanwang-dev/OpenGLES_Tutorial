@@ -24,7 +24,7 @@
 @property (readonly) GLuint                     width;
 @property (readonly) GLuint                     height;
 
-- (instancetype)initWithName:(GLuint)name
+- (_Nullable instancetype)initWithName:(GLuint)name
                       target:(GLenum)target
                        width:(GLuint)width
                       height:(GLuint)height;

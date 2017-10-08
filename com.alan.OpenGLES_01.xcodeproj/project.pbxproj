@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		8C0FC0281F7A162A00975572 /* Test00GLKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0FC0271F7A162A00975572 /* Test00GLKVC.m */; };
 		8C17BCD71F7EC34800B3493A /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C17BCD61F7EC33E00B3493A /* abc.png */; };
+		8C6650CC1F8A82C000500022 /* Test03Multi-Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6650CB1F8A82C000500022 /* Test03Multi-Texture.m */; };
+		8C6650CF1F8A869600500022 /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6650CD1F8A83C100500022 /* beetle.png */; };
+		8C6650D01F8A869600500022 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C6650CE1F8A83C700500022 /* leaves.gif */; };
 		8CFCEBF01F777BC000332379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEBEF1F777BC000332379 /* AppDelegate.m */; };
-		8CFCEBF31F777BC000332379 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF21F777BC000332379 /* ViewController.m */; };
 		8CFCEBF61F777BC000332379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF41F777BC000332379 /* Main.storyboard */; };
 		8CFCEBF81F777BC000332379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF71F777BC000332379 /* Assets.xcassets */; };
 		8CFCEBFB1F777BC000332379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF91F777BC000332379 /* LaunchScreen.storyboard */; };
@@ -18,7 +20,7 @@
 		8CFCEC081F777BC000332379 /* com_alan_OpenGLES_01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEC071F777BC000332379 /* com_alan_OpenGLES_01Tests.m */; };
 		8CFCEC131F777BC000332379 /* com_alan_OpenGLES_01UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEC121F777BC000332379 /* com_alan_OpenGLES_01UITests.m */; };
 		8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEC211F779C9B00332379 /* Test01Texture.m */; };
-		C3805EDA1F7F6F8700FF63E1 /* Test03TextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805ED91F7F6F8700FF63E1 /* Test03TextureLoader.m */; };
+		C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */; };
 		C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +45,13 @@
 		8C0FC0261F7A162A00975572 /* Test00GLKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test00GLKVC.h; sourceTree = "<group>"; };
 		8C0FC0271F7A162A00975572 /* Test00GLKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test00GLKVC.m; sourceTree = "<group>"; };
 		8C17BCD61F7EC33E00B3493A /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
+		8C6650CA1F8A82C000500022 /* Test03Multi-Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test03Multi-Texture.h"; sourceTree = "<group>"; };
+		8C6650CB1F8A82C000500022 /* Test03Multi-Texture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Test03Multi-Texture.m"; sourceTree = "<group>"; };
+		8C6650CD1F8A83C100500022 /* beetle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beetle.png; sourceTree = "<group>"; };
+		8C6650CE1F8A83C700500022 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
 		8CFCEBEB1F777BC000332379 /* com.alan.OpenGLES_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.alan.OpenGLES_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFCEBEE1F777BC000332379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CFCEBEF1F777BC000332379 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8CFCEBF11F777BC000332379 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8CFCEBF21F777BC000332379 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8CFCEBF51F777BC000332379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CFCEBF71F777BC000332379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CFCEBFA1F777BC000332379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,8 +65,8 @@
 		8CFCEC141F777BC000332379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CFCEC201F779C9B00332379 /* Test01Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test01Texture.h; sourceTree = "<group>"; };
 		8CFCEC211F779C9B00332379 /* Test01Texture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test01Texture.m; sourceTree = "<group>"; };
-		C3805ED81F7F6F8700FF63E1 /* Test03TextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test03TextureLoader.h; sourceTree = "<group>"; };
-		C3805ED91F7F6F8700FF63E1 /* Test03TextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test03TextureLoader.m; sourceTree = "<group>"; };
+		C3805ED81F7F6F8700FF63E1 /* Test02TextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test02TextureLoader.h; sourceTree = "<group>"; };
+		C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test02TextureLoader.m; sourceTree = "<group>"; };
 		C3805EE91F7F896A00FF63E1 /* AGLKTextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureLoader.h; sourceTree = "<group>"; };
 		C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C6650C61F8A820300500022 /* TextureLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C3805ED81F7F6F8700FF63E1 /* Test02TextureLoader.h */,
+				C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */,
+				C3805EE91F7F896A00FF63E1 /* AGLKTextureLoader.h */,
+				C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */,
+			);
+			path = TextureLoader;
+			sourceTree = "<group>";
+		};
+		8C6650C71F8A821100500022 /* LoadTexture */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCEC201F779C9B00332379 /* Test01Texture.h */,
+				8CFCEC211F779C9B00332379 /* Test01Texture.m */,
+			);
+			path = LoadTexture;
+			sourceTree = "<group>";
+		};
+		8C6650C81F8A822300500022 /* GLKViewControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8C0FC0261F7A162A00975572 /* Test00GLKVC.h */,
+				8C0FC0271F7A162A00975572 /* Test00GLKVC.m */,
+			);
+			path = GLKViewControllerDemo;
+			sourceTree = "<group>";
+		};
+		8C6650C91F8A827A00500022 /* Multi-Texture */ = {
+			isa = PBXGroup;
+			children = (
+				8C6650CA1F8A82C000500022 /* Test03Multi-Texture.h */,
+				8C6650CB1F8A82C000500022 /* Test03Multi-Texture.m */,
+			);
+			path = "Multi-Texture";
+			sourceTree = "<group>";
+		};
 		8CFCEBE21F777BC000332379 = {
 			isa = PBXGroup;
 			children = (
@@ -117,22 +159,18 @@
 			children = (
 				8CFCEBEE1F777BC000332379 /* AppDelegate.h */,
 				8CFCEBEF1F777BC000332379 /* AppDelegate.m */,
-				8CFCEBF11F777BC000332379 /* ViewController.h */,
-				8CFCEBF21F777BC000332379 /* ViewController.m */,
-				8C0FC0261F7A162A00975572 /* Test00GLKVC.h */,
-				8C0FC0271F7A162A00975572 /* Test00GLKVC.m */,
-				8CFCEC201F779C9B00332379 /* Test01Texture.h */,
-				8CFCEC211F779C9B00332379 /* Test01Texture.m */,
-				C3805ED81F7F6F8700FF63E1 /* Test03TextureLoader.h */,
-				C3805ED91F7F6F8700FF63E1 /* Test03TextureLoader.m */,
-				C3805EE91F7F896A00FF63E1 /* AGLKTextureLoader.h */,
-				C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */,
+				8C6650C81F8A822300500022 /* GLKViewControllerDemo */,
+				8C6650C71F8A821100500022 /* LoadTexture */,
+				8C6650C61F8A820300500022 /* TextureLoader */,
+				8C6650C91F8A827A00500022 /* Multi-Texture */,
 				8CFCEBF41F777BC000332379 /* Main.storyboard */,
 				8CFCEBF71F777BC000332379 /* Assets.xcassets */,
 				8CFCEBF91F777BC000332379 /* LaunchScreen.storyboard */,
 				8CFCEBFC1F777BC000332379 /* Info.plist */,
 				8CFCEBFD1F777BC000332379 /* main.m */,
 				8C17BCD61F7EC33E00B3493A /* abc.png */,
+				8C6650CD1F8A83C100500022 /* beetle.png */,
+				8C6650CE1F8A83C700500022 /* leaves.gif */,
 			);
 			path = com.alan.OpenGLES_01;
 			sourceTree = "<group>";
@@ -261,6 +299,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6650CF1F8A869600500022 /* beetle.png in Resources */,
+				8C6650D01F8A869600500022 /* leaves.gif in Resources */,
 				8C17BCD71F7EC34800B3493A /* abc.png in Resources */,
 				8CFCEBFB1F777BC000332379 /* LaunchScreen.storyboard in Resources */,
 				8CFCEBF81F777BC000332379 /* Assets.xcassets in Resources */,
@@ -289,11 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFCEBF31F777BC000332379 /* ViewController.m in Sources */,
 				8CFCEBFE1F777BC000332379 /* main.m in Sources */,
 				8CFCEBF01F777BC000332379 /* AppDelegate.m in Sources */,
-				C3805EDA1F7F6F8700FF63E1 /* Test03TextureLoader.m in Sources */,
+				C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */,
 				8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */,
+				8C6650CC1F8A82C000500022 /* Test03Multi-Texture.m in Sources */,
 				8C0FC0281F7A162A00975572 /* Test00GLKVC.m in Sources */,
 				C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */,
 			);

@@ -80,6 +80,26 @@
                                             <segue destination="HhU-ci-QyF" kind="show" id="9OU-Dm-sab"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lpn-hU-aee">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lpn-hU-aee" id="tFv-Ee-6tu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multi-Texture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-In-znw">
+                                                    <rect key="frame" x="26" y="11" width="101" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KUE-ly-TfN" kind="show" id="lS0-mI-eft"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -129,7 +149,7 @@
         <!--GLKit View Controller-->
         <scene sceneID="Qgj-gn-EOW">
             <objects>
-                <glkViewController preferredFramesPerSecond="30" id="HhU-ci-QyF" customClass="Test03TextureLoader" sceneMemberID="viewController">
+                <glkViewController preferredFramesPerSecond="30" id="HhU-ci-QyF" customClass="Test02TextureLoader" sceneMemberID="viewController">
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="fbj-Q1-Wyf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +162,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGb-uL-vlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2903" y="-402"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="gnQ-1H-Cjp">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="KUE-ly-TfN" customClass="Test03Multi_Texture" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="rEb-Ml-vNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3jY-rR-tDe"/>
+                        <connections>
+                            <outlet property="delegate" destination="KUE-ly-TfN" id="f3m-r9-gnr"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luC-fp-FZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609" y="-403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4kP-Ab-YaO">

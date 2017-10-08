@@ -15,28 +15,68 @@
 @property (assign, nonatomic) GLuint height;
 @end
 
+typedef enum
+{
+    AGLK1 = 1,
+    AGLK2 = 2,
+    AGLK4 = 4,
+    AGLK8 = 8,
+    AGLK16 = 16,
+    AGLK32 = 32,
+    AGLK64 = 64,
+    AGLK128 = 128,
+    AGLK256 = 256,
+    AGLK512 = 512,
+    AGLK1024 = 1024,
+}
+AGLKTPowerOf2;
+
+static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
+{
+    AGLKTPowerOf2 result = AGLK1;
+    if (dimension > (GLuint)AGLK512){
+        result  = AGLK1024;
+    }else if(dimension > (GLuint)AGLK256){
+        result = AGLK512;
+    }else if(dimension > (GLuint)AGLK128){
+        result = AGLK256;
+    }else if(dimension > (GLuint)AGLK64){
+        result = AGLK128;
+    }else if(dimension > (GLuint)AGLK32){
+        result = AGLK64;
+    }else if(dimension > (GLuint)AGLK16){
+        result = AGLK32;
+    }else if(dimension > (GLuint)AGLK8){
+        result = AGLK16;
+    }else if(dimension > (GLuint)AGLK4){
+        result = AGLK8;
+    }else if(dimension > (GLuint)AGLK2){
+        result = AGLK4;
+    }else if(dimension > (GLuint)AGLK1){
+        result = AGLK2;
+    }
+    
+    return result;
+}
+
+
 @implementation AGLKTextureInfo
 - (instancetype)initWithName:(GLuint)name
                       target:(GLenum)target
                        width:(GLuint)width
                       height:(GLuint)height{
     if (self = [super init]){
-        self.name = name;
-        self.target = target;
-        self.width = width;
-        self.height = height;
+        _name = name;
+        _target = target;
+        _width = width;
+        _height = height;
     }
     return self;
 }
 @end
 
 
-
-static NSData * AGLKDataWithResizedCGImageByte(CGImageRef cgImage, size_t *width, size_t *height) {
-    
-    return nil;
-}
-
+#pragma mark - AGLKTextureLoader
 @implementation AGLKTextureLoader
 
 + (nullable AGLKTextureInfo *)textureWithCGImage:(CGImageRef _Nullable)cgImage
@@ -47,11 +87,12 @@ static NSData * AGLKDataWithResizedCGImageByte(CGImageRef cgImage, size_t *width
     }
     
     GLuint width, height;
-    NSData *data = AGLKDataWithResizedCGImageByte(cgImage, &width, &height);
+    NSData *data = [self AGLKDataWithResizedCGImageByte:cgImage width:&width height:&height];
     
     GLuint textureBufferID;
     glGenTextures(1, &textureBufferID);
-    glBindTexture(GL_TEXTURE_2D, textureBufferID);
+    glBindTexture(GL_TEXTURE_2D,
+                  textureBufferID);
     
     /*
      位编码类型介绍
@@ -91,6 +132,49 @@ static NSData * AGLKDataWithResizedCGImageByte(CGImageRef cgImage, size_t *width
                                                                   height:(GLuint)height];
     
     return textureInfo;
+}
+
++ (NSData *)AGLKDataWithResizedCGImageByte:(CGImageRef)cgImage width:(GLuint *)widthPtr height:(GLuint *)heightPtr {
+    NSCParameterAssert(NULL != cgImage);
+    NSCParameterAssert(NULL != widthPtr);
+    NSCParameterAssert(NULL != heightPtr);
+
+    size_t imgWidth = CGImageGetWidth(cgImage);
+    size_t imgHeight = CGImageGetHeight(cgImage);
+
+    /********************  ********************/
+    size_t width = AGLKCalculatePowerOf2ForDimension(imgWidth);
+    size_t height = AGLKCalculatePowerOf2ForDimension(imgHeight);
+    
+    *widthPtr = width;
+    *heightPtr = height;
+
+    NSMutableData *imgData = [NSMutableData dataWithLength:width * height * 4];
+
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    // create bitmap context
+    CGContextRef context = CGBitmapContextCreate([imgData mutableBytes],        //
+                                                 width,                         // image width
+                                                 height,                        // image height
+                                                 8,                             // bits per component
+                                                 4 * width,                     // bytes per row
+                                                 colorSpace,                    // color space ref
+                                                 kCGImageAlphaNoneSkipFirst);   // bitmap info
+    CGColorSpaceRelease(colorSpace);
+
+    // context transform
+    CGContextTranslateCTM(context, 0, height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+
+    // draw image
+    CGContextDrawImage(context,
+                       CGRectMake(0, 0, width, height),
+                       cgImage);
+
+    // release
+    CGContextRelease(context);
+
+    return imgData;
 }
 
 @end
