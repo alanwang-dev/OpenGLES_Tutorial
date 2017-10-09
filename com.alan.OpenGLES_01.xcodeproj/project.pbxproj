@@ -22,6 +22,7 @@
 		8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEC211F779C9B00332379 /* Test01Texture.m */; };
 		C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */; };
 		C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */; };
+		C3805EF11F8B2DDF00FF63E1 /* Test04TextureEnvMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test02TextureLoader.m; sourceTree = "<group>"; };
 		C3805EE91F7F896A00FF63E1 /* AGLKTextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureLoader.h; sourceTree = "<group>"; };
 		C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
+		C3805EEF1F8B2DDF00FF63E1 /* Test04TextureEnvMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test04TextureEnvMode.h; sourceTree = "<group>"; };
+		C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test04TextureEnvMode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +110,13 @@
 			path = TextureLoader;
 			sourceTree = "<group>";
 		};
-		8C6650C71F8A821100500022 /* LoadTexture */ = {
+		8C6650C71F8A821100500022 /* Texture */ = {
 			isa = PBXGroup;
 			children = (
 				8CFCEC201F779C9B00332379 /* Test01Texture.h */,
 				8CFCEC211F779C9B00332379 /* Test01Texture.m */,
 			);
-			path = LoadTexture;
+			path = Texture;
 			sourceTree = "<group>";
 		};
 		8C6650C81F8A822300500022 /* GLKViewControllerDemo */ = {
@@ -125,13 +128,13 @@
 			path = GLKViewControllerDemo;
 			sourceTree = "<group>";
 		};
-		8C6650C91F8A827A00500022 /* Multi-Texture */ = {
+		8C6650C91F8A827A00500022 /* Texture Multiple Render */ = {
 			isa = PBXGroup;
 			children = (
 				8C6650CA1F8A82C000500022 /* Test03Multi-Texture.h */,
 				8C6650CB1F8A82C000500022 /* Test03Multi-Texture.m */,
 			);
-			path = "Multi-Texture";
+			path = "Texture Multiple Render";
 			sourceTree = "<group>";
 		};
 		8CFCEBE21F777BC000332379 = {
@@ -160,9 +163,10 @@
 				8CFCEBEE1F777BC000332379 /* AppDelegate.h */,
 				8CFCEBEF1F777BC000332379 /* AppDelegate.m */,
 				8C6650C81F8A822300500022 /* GLKViewControllerDemo */,
-				8C6650C71F8A821100500022 /* LoadTexture */,
+				8C6650C71F8A821100500022 /* Texture */,
 				8C6650C61F8A820300500022 /* TextureLoader */,
-				8C6650C91F8A827A00500022 /* Multi-Texture */,
+				8C6650C91F8A827A00500022 /* Texture Multiple Render */,
+				C3805EF21F8B2DEE00FF63E1 /* TextureEnvMode */,
 				8CFCEBF41F777BC000332379 /* Main.storyboard */,
 				8CFCEBF71F777BC000332379 /* Assets.xcassets */,
 				8CFCEBF91F777BC000332379 /* LaunchScreen.storyboard */,
@@ -191,6 +195,15 @@
 				8CFCEC141F777BC000332379 /* Info.plist */,
 			);
 			path = com.alan.OpenGLES_01UITests;
+			sourceTree = "<group>";
+		};
+		C3805EF21F8B2DEE00FF63E1 /* TextureEnvMode */ = {
+			isa = PBXGroup;
+			children = (
+				C3805EEF1F8B2DDF00FF63E1 /* Test04TextureEnvMode.h */,
+				C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */,
+			);
+			path = TextureEnvMode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 				8CFCEBF01F777BC000332379 /* AppDelegate.m in Sources */,
 				C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */,
 				8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */,
+				C3805EF11F8B2DDF00FF63E1 /* Test04TextureEnvMode.m in Sources */,
 				8C6650CC1F8A82C000500022 /* Test03Multi-Texture.m in Sources */,
 				8C0FC0281F7A162A00975572 /* Test00GLKVC.m in Sources */,
 				C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */,

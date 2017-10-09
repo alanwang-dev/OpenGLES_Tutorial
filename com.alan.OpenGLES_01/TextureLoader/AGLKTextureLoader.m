@@ -31,7 +31,7 @@ typedef enum
 }
 AGLKTPowerOf2;
 
-static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
+static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(GLuint dimension)
 {
     AGLKTPowerOf2 result = AGLK1;
     if (dimension > (GLuint)AGLK512){
@@ -90,9 +90,10 @@ static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
     NSData *data = [self AGLKDataWithResizedCGImageByte:cgImage width:&width height:&height];
     
     GLuint textureBufferID;
+    // 1. generate texture id
     glGenTextures(1, &textureBufferID);
-    glBindTexture(GL_TEXTURE_2D,
-                  textureBufferID);
+    // 2. bind texture type
+    glBindTexture(GL_TEXTURE_2D, textureBufferID);
     
     /*
      位编码类型介绍
@@ -110,12 +111,12 @@ static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
          r g b 均使用5位保存，a 使用1位保存(透明/不透明)
      */
     
-    // copy pixel color to texture buffer
+    // 3. copy pixel color to texture buffer
     glTexImage2D(GL_TEXTURE_2D,
                  0,                 // MIP 贴图等级，不适用MIP贴图则必须为0
                  GL_RGBA,           // internalFormat 图片颜色信息存储方式
-                 (int)width,        // image texture width (需要是2的幂次方)
-                 (int)height,       // image texture height (需要是2的幂次方)
+                 (GLuint)width,     // image texture width (需要是2的幂次方)
+                 (GLuint)height,    // image texture height (需要是2的幂次方)
                  0,                 // border : 围绕纹理的纹素的边界大小，一般设置为0
                  GL_RGBA,           // 初始化 texture buffer 所使用的图像数据中的每个像素所要保存的信息（一般与internalFormat 保持一致）
                  GL_UNSIGNED_BYTE,  // 缓存中的纹素数据使用的位编码类型
@@ -139,12 +140,12 @@ static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
     NSCParameterAssert(NULL != widthPtr);
     NSCParameterAssert(NULL != heightPtr);
 
-    size_t imgWidth = CGImageGetWidth(cgImage);
-    size_t imgHeight = CGImageGetHeight(cgImage);
+    GLuint imgWidth = (GLuint)CGImageGetWidth(cgImage);
+    GLuint imgHeight = (GLuint)CGImageGetHeight(cgImage);
 
-    /********************  ********************/
-    size_t width = AGLKCalculatePowerOf2ForDimension(imgWidth);
-    size_t height = AGLKCalculatePowerOf2ForDimension(imgHeight);
+    /******************** resize dimension to power of 2 ********************/
+    GLuint width = AGLKCalculatePowerOf2ForDimension(imgWidth);
+    GLuint height = AGLKCalculatePowerOf2ForDimension(imgHeight);
     
     *widthPtr = width;
     *heightPtr = height;
@@ -153,13 +154,13 @@ static AGLKTPowerOf2 AGLKCalculatePowerOf2ForDimension(size_t dimension)
 
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     // create bitmap context
-    CGContextRef context = CGBitmapContextCreate([imgData mutableBytes],        //
-                                                 width,                         // image width
-                                                 height,                        // image height
-                                                 8,                             // bits per component
-                                                 4 * width,                     // bytes per row
-                                                 colorSpace,                    // color space ref
-                                                 kCGImageAlphaNoneSkipFirst);   // bitmap info
+    CGContextRef context = CGBitmapContextCreate([imgData mutableBytes],          //
+                                                 width,                           // image width
+                                                 height,                          // image height
+                                                 8,                               // bits per component
+                                                 4 * width,                       // bytes per row
+                                                 colorSpace,                      // color space ref
+                                                 kCGImageAlphaPremultipliedLast); // bitmap info
     CGColorSpaceRelease(colorSpace);
 
     // context transform

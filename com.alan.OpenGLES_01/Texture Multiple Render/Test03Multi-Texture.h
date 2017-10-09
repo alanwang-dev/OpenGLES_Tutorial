@@ -6,8 +6,8 @@
 //  Copyright © 2017年 王可成. All rights reserved.
 //
 
-#import "Test02TextureLoader.h"
+#import <GLKit/GLKit.h>
 
-@interface Test03Multi_Texture : Test02TextureLoader
-@property (nonatomic) AGLKTextureInfo *textureInfo_1;
+@interface Test03Multi_Texture : GLKViewController
+
 @end
