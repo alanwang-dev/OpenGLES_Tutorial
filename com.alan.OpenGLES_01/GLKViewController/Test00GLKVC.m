@@ -37,6 +37,10 @@ static const SceneVertex vertices[] = {
     [self setupVBO];
 }
 
+- (void)dealloc{
+    [EAGLContext setCurrentContext:nil];
+}
+
 - (void)setupBaseEffect{
     _baseEffect = [[GLKBaseEffect alloc] init];
     _baseEffect.useConstantColor = GL_TRUE;

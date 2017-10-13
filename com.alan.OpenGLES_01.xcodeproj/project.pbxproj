@@ -13,7 +13,6 @@
 		8C6650CF1F8A869600500022 /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6650CD1F8A83C100500022 /* beetle.png */; };
 		8C6650D01F8A869600500022 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C6650CE1F8A83C700500022 /* leaves.gif */; };
 		8CFCEBF01F777BC000332379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEBEF1F777BC000332379 /* AppDelegate.m */; };
-		8CFCEBF61F777BC000332379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF41F777BC000332379 /* Main.storyboard */; };
 		8CFCEBF81F777BC000332379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF71F777BC000332379 /* Assets.xcassets */; };
 		8CFCEBFB1F777BC000332379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF91F777BC000332379 /* LaunchScreen.storyboard */; };
 		8CFCEBFE1F777BC000332379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCEBFD1F777BC000332379 /* main.m */; };
@@ -23,6 +22,11 @@
 		C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805ED91F7F6F8700FF63E1 /* Test02TextureLoader.m */; };
 		C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */; };
 		C3805EF11F8B2DDF00FF63E1 /* Test04TextureEnvMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */; };
+		C3805EFA1F8B59A400FF63E1 /* Test05WrapMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EF91F8B59A400FF63E1 /* Test05WrapMode.m */; };
+		C3805F011F8B970700FF63E1 /* Test06TextureCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */; };
+		C38963191F9089C700FF3BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF41F777BC000332379 /* Main.storyboard */; };
+		C3EA249E1F8DB6AA0027EF51 /* Test07lightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA249D1F8DB6AA0027EF51 /* Test07lightEffect.m */; };
+		C3EA24A91F8FC5200027EF51 /* LightingDetail256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EA24A81F8FC3380027EF51 /* LightingDetail256x256.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,14 @@
 		C3805EEA1F7F896A00FF63E1 /* AGLKTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureLoader.m; sourceTree = "<group>"; };
 		C3805EEF1F8B2DDF00FF63E1 /* Test04TextureEnvMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test04TextureEnvMode.h; sourceTree = "<group>"; };
 		C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test04TextureEnvMode.m; sourceTree = "<group>"; };
+		C3805EF81F8B59A400FF63E1 /* Test05WrapMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test05WrapMode.h; sourceTree = "<group>"; };
+		C3805EF91F8B59A400FF63E1 /* Test05WrapMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test05WrapMode.m; sourceTree = "<group>"; };
+		C3805EFF1F8B970700FF63E1 /* Test06TextureCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test06TextureCompress.h; sourceTree = "<group>"; };
+		C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test06TextureCompress.m; sourceTree = "<group>"; };
+		C3EA249C1F8DB6AA0027EF51 /* Test07lightEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test07lightEffect.h; sourceTree = "<group>"; };
+		C3EA249D1F8DB6AA0027EF51 /* Test07lightEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test07lightEffect.m; sourceTree = "<group>"; };
+		C3EA24A71F8FC3380027EF51 /* Lighting256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lighting256x256.png; sourceTree = "<group>"; };
+		C3EA24A81F8FC3380027EF51 /* LightingDetail256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightingDetail256x256.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +131,13 @@
 			path = Texture;
 			sourceTree = "<group>";
 		};
-		8C6650C81F8A822300500022 /* GLKViewControllerDemo */ = {
+		8C6650C81F8A822300500022 /* GLKViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8C0FC0261F7A162A00975572 /* Test00GLKVC.h */,
 				8C0FC0271F7A162A00975572 /* Test00GLKVC.m */,
 			);
-			path = GLKViewControllerDemo;
+			path = GLKViewController;
 			sourceTree = "<group>";
 		};
 		8C6650C91F8A827A00500022 /* Texture Multiple Render */ = {
@@ -160,13 +172,16 @@
 		8CFCEBED1F777BC000332379 /* com.alan.OpenGLES_01 */ = {
 			isa = PBXGroup;
 			children = (
-				8CFCEBEE1F777BC000332379 /* AppDelegate.h */,
-				8CFCEBEF1F777BC000332379 /* AppDelegate.m */,
-				8C6650C81F8A822300500022 /* GLKViewControllerDemo */,
+				8C6650C81F8A822300500022 /* GLKViewController */,
 				8C6650C71F8A821100500022 /* Texture */,
 				8C6650C61F8A820300500022 /* TextureLoader */,
 				8C6650C91F8A827A00500022 /* Texture Multiple Render */,
-				C3805EF21F8B2DEE00FF63E1 /* TextureEnvMode */,
+				C3805EF21F8B2DEE00FF63E1 /* Texture Env Mode */,
+				C3805EF71F8B598000FF63E1 /* Texture Wrap Mode */,
+				C3805F021F8B971400FF63E1 /* Extension */,
+				C3EA249F1F8DB6BC0027EF51 /* LightEffect */,
+				8CFCEBEE1F777BC000332379 /* AppDelegate.h */,
+				8CFCEBEF1F777BC000332379 /* AppDelegate.m */,
 				8CFCEBF41F777BC000332379 /* Main.storyboard */,
 				8CFCEBF71F777BC000332379 /* Assets.xcassets */,
 				8CFCEBF91F777BC000332379 /* LaunchScreen.storyboard */,
@@ -175,6 +190,8 @@
 				8C17BCD61F7EC33E00B3493A /* abc.png */,
 				8C6650CD1F8A83C100500022 /* beetle.png */,
 				8C6650CE1F8A83C700500022 /* leaves.gif */,
+				C3EA24A71F8FC3380027EF51 /* Lighting256x256.png */,
+				C3EA24A81F8FC3380027EF51 /* LightingDetail256x256.png */,
 			);
 			path = com.alan.OpenGLES_01;
 			sourceTree = "<group>";
@@ -197,13 +214,40 @@
 			path = com.alan.OpenGLES_01UITests;
 			sourceTree = "<group>";
 		};
-		C3805EF21F8B2DEE00FF63E1 /* TextureEnvMode */ = {
+		C3805EF21F8B2DEE00FF63E1 /* Texture Env Mode */ = {
 			isa = PBXGroup;
 			children = (
 				C3805EEF1F8B2DDF00FF63E1 /* Test04TextureEnvMode.h */,
 				C3805EF01F8B2DDF00FF63E1 /* Test04TextureEnvMode.m */,
 			);
-			path = TextureEnvMode;
+			path = "Texture Env Mode";
+			sourceTree = "<group>";
+		};
+		C3805EF71F8B598000FF63E1 /* Texture Wrap Mode */ = {
+			isa = PBXGroup;
+			children = (
+				C3805EF81F8B59A400FF63E1 /* Test05WrapMode.h */,
+				C3805EF91F8B59A400FF63E1 /* Test05WrapMode.m */,
+			);
+			path = "Texture Wrap Mode";
+			sourceTree = "<group>";
+		};
+		C3805F021F8B971400FF63E1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3805EFF1F8B970700FF63E1 /* Test06TextureCompress.h */,
+				C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C3EA249F1F8DB6BC0027EF51 /* LightEffect */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA249C1F8DB6AA0027EF51 /* Test07lightEffect.h */,
+				C3EA249D1F8DB6AA0027EF51 /* Test07lightEffect.m */,
+			);
+			path = LightEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,12 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38963191F9089C700FF3BB4 /* Main.storyboard in Resources */,
+				C3EA24A91F8FC5200027EF51 /* LightingDetail256x256.png in Resources */,
 				8C6650CF1F8A869600500022 /* beetle.png in Resources */,
 				8C6650D01F8A869600500022 /* leaves.gif in Resources */,
 				8C17BCD71F7EC34800B3493A /* abc.png in Resources */,
 				8CFCEBFB1F777BC000332379 /* LaunchScreen.storyboard in Resources */,
 				8CFCEBF81F777BC000332379 /* Assets.xcassets in Resources */,
-				8CFCEBF61F777BC000332379 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +388,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CFCEBFE1F777BC000332379 /* main.m in Sources */,
+				C3805F011F8B970700FF63E1 /* Test06TextureCompress.m in Sources */,
 				8CFCEBF01F777BC000332379 /* AppDelegate.m in Sources */,
 				C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */,
 				8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */,
+				C3EA249E1F8DB6AA0027EF51 /* Test07lightEffect.m in Sources */,
 				C3805EF11F8B2DDF00FF63E1 /* Test04TextureEnvMode.m in Sources */,
 				8C6650CC1F8A82C000500022 /* Test03Multi-Texture.m in Sources */,
 				8C0FC0281F7A162A00975572 /* Test00GLKVC.m in Sources */,
 				C3805EEB1F7F896A00FF63E1 /* AGLKTextureLoader.m in Sources */,
+				C3805EFA1F8B59A400FF63E1 /* Test05WrapMode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +563,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVZG4S3L8Y;
 				INFOPLIST_FILE = com.alan.OpenGLES_01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.com-alan-OpenGLES-01";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.OpenGLES-01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -529,8 +578,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVZG4S3L8Y;
 				INFOPLIST_FILE = com.alan.OpenGLES_01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.com-alan-OpenGLES-01";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.OpenGLES-01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

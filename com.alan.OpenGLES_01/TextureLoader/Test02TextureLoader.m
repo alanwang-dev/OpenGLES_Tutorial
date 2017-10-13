@@ -22,6 +22,10 @@
     [self setupTextureBuffer];
 }
 
+- (void)dealloc{
+    [EAGLContext setCurrentContext:nil];
+}
+
 // setup vertices buffer
 - (void)setupBufferWithTarget:(GLenum)target size:(GLsizeiptr)size data:(const GLvoid *)data {
     GLuint buffers;

@@ -37,6 +37,10 @@ static const SceneVector vertices[] = {
     [self loadTexture];
 }
 
+- (void)dealloc{
+    [EAGLContext setCurrentContext:nil];
+}
+
 - (void)setupContex{
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [(GLKView *)self.view setContext:context];

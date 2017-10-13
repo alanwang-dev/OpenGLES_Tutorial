@@ -37,6 +37,10 @@ static const SceneVertex vertices[] = {
     [self setupTexture];
 }
 
+- (void)dealloc{
+    [EAGLContext setCurrentContext:nil];
+}
+
 - (void)setupVBO{
     GLuint buffers;
     glGenBuffers(1, &buffers);
@@ -51,7 +55,7 @@ static const SceneVertex vertices[] = {
 }
 
 - (void)setupTexture{
-    CGImageRef image = [UIImage imageNamed:@"bbc"].CGImage;
+    CGImageRef image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"abc" ofType:@"png"]].CGImage;
     NSError *error;
     //GLKTextureLoaderOriginBottomLeft 纹理坐标系是相反的
     NSDictionary *options = @{
