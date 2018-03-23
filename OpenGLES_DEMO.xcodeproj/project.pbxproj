@@ -25,6 +25,7 @@
 		C3805EFA1F8B59A400FF63E1 /* Test05WrapMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805EF91F8B59A400FF63E1 /* Test05WrapMode.m */; };
 		C3805F011F8B970700FF63E1 /* Test06TextureCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */; };
 		C38963191F9089C700FF3BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFCEBF41F777BC000332379 /* Main.storyboard */; };
+		C390415E2064A5F200146E99 /* FrameBuffer&Renderbuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = C390415D2064A5F200146E99 /* FrameBuffer&Renderbuffer.m */; };
 		C3EA249E1F8DB6AA0027EF51 /* Test07lightEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA249D1F8DB6AA0027EF51 /* Test07lightEffect.m */; };
 		C3EA24A91F8FC5200027EF51 /* LightingDetail256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EA24A81F8FC3380027EF51 /* LightingDetail256x256.png */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,8 @@
 		C3805EF91F8B59A400FF63E1 /* Test05WrapMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test05WrapMode.m; sourceTree = "<group>"; };
 		C3805EFF1F8B970700FF63E1 /* Test06TextureCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test06TextureCompress.h; sourceTree = "<group>"; };
 		C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test06TextureCompress.m; sourceTree = "<group>"; };
+		C390415C2064A5F200146E99 /* FrameBuffer&Renderbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameBuffer&Renderbuffer.h"; sourceTree = "<group>"; };
+		C390415D2064A5F200146E99 /* FrameBuffer&Renderbuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FrameBuffer&Renderbuffer.m"; sourceTree = "<group>"; };
 		C3EA249C1F8DB6AA0027EF51 /* Test07lightEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test07lightEffect.h; sourceTree = "<group>"; };
 		C3EA249D1F8DB6AA0027EF51 /* Test07lightEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test07lightEffect.m; sourceTree = "<group>"; };
 		C3EA24A71F8FC3380027EF51 /* Lighting256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lighting256x256.png; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		8CFCEBED1F777BC000332379 /* OpenGLES_DEMO */ = {
 			isa = PBXGroup;
 			children = (
+				C390415B2064A5A000146E99 /* Apple Tutorial */,
 				C34A01101F90ADCD006B0916 /* GLKView */,
 				8C6650C81F8A822300500022 /* GLKViewController */,
 				8C6650C71F8A821100500022 /* Texture */,
@@ -196,6 +200,15 @@
 				C3805F001F8B970700FF63E1 /* Test06TextureCompress.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C390415B2064A5A000146E99 /* Apple Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				C390415C2064A5F200146E99 /* FrameBuffer&Renderbuffer.h */,
+				C390415D2064A5F200146E99 /* FrameBuffer&Renderbuffer.m */,
+			);
+			name = "Apple Tutorial";
 			sourceTree = "<group>";
 		};
 		C3EA249F1F8DB6BC0027EF51 /* LightEffect */ = {
@@ -288,6 +301,7 @@
 				C34A010F1F90ADC4006B0916 /* AGLKView.m in Sources */,
 				C3805EDA1F7F6F8700FF63E1 /* Test02TextureLoader.m in Sources */,
 				8CFCEC221F779C9B00332379 /* Test01Texture.m in Sources */,
+				C390415E2064A5F200146E99 /* FrameBuffer&Renderbuffer.m in Sources */,
 				C3EA249E1F8DB6AA0027EF51 /* Test07lightEffect.m in Sources */,
 				C3805EF11F8B2DDF00FF63E1 /* Test04TextureEnvMode.m in Sources */,
 				8C6650CC1F8A82C000500022 /* Test03Multi-Texture.m in Sources */,
@@ -429,11 +443,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVZG4S3L8Y;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
 				INFOPLIST_FILE = OpenGLES_DEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.OpenGLES-01";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ksyun.OpenGLES-01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -444,11 +458,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVZG4S3L8Y;
+				DEVELOPMENT_TEAM = ZGJ54Q7R45;
 				INFOPLIST_FILE = OpenGLES_DEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alan.OpenGLES-01";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ksyun.OpenGLES-01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

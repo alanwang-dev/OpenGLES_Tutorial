@@ -33,16 +33,24 @@ static const SceneVertex vertices[] = {
 
 - (void)loadView{
     AGLKView *view = [[AGLKView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    view.delegate = self;
     self.view = view;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.opaque = YES;
+    ((AGLKView *)self.view).delegate = self;
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [(AGLKView *)self.view setContext:context];
     [EAGLContext setCurrentContext:context];
     
+    [self setupBaseEffect];
+    
+    glClearColor(0, 0, 0, 1);
+    
+    [self setupVBO];
     [self link];
 }
 

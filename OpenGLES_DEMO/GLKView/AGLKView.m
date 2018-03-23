@@ -33,17 +33,19 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    // 1. Attaches an CAEAGLLayer as storage for the OpenGL ES renderbuffer object bound to GL_FRAMEBUFFER
-    [context renderbufferStorage:GL_FRAMEBUFFER fromDrawable:(CAEAGLLayer *)self.layer];
     
-    // 2. make color render buffer the current buffer for display
-    glBindRenderbuffer(GL_RENDERBUFFER, colorRenderBuffer);
+    [EAGLContext setCurrentContext:context];
+    // 1. Attaches an CAEAGLLayer as storage for the OpenGL ES renderbuffer object bound to GL_RENDERBUFFER
+    [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer *)self.layer];
     
     // 3. check frame buffer status
     GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
     if (status != GL_FRAMEBUFFER_COMPLETE) {
         NSLog(@"frame buffer status:%x", status);
     }
+    
+    // 2. make color render buffer the current buffer for display
+    glBindRenderbuffer(GL_RENDERBUFFER, colorRenderBuffer);
 }
 
 - (void)drawRect:(CGRect)rect{
@@ -54,7 +56,7 @@
 
 - (void)display{
     [EAGLContext setCurrentContext:context];
-    glViewport(0, 0, drawableWidth, drawableHeight);
+    glViewport(0, 0, (GLuint)self.drawableWidth, (GLuint)self.drawableHeight);
     
     [self drawRect:self.bounds];
     [context presentRenderbuffer:GL_RENDERBUFFER];
