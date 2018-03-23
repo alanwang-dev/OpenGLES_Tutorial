@@ -7,7 +7,8 @@
 //
 
 #import "Test05WrapMode.h"
-
+#import <OpenGLES/ES2/glext.h>
+#import <OpenGLES/ES3/gl.h>
 typedef struct {
     GLKVector3 positionCoords;
     GLKVector2 textureCoords;
